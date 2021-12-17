@@ -28,7 +28,7 @@ In open file press `CTRL + SHIFT + P` and type: Copyright insert
 ## Release Notes
 
 ### 1.1.0
-add extra space below copyright
+add extra space below copyright<br>
 add extra ***
 ### 1.0.1
 Small fixes
