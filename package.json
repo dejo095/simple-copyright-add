@@ -3,7 +3,7 @@
 	"displayName": "Simple Copyright Add",
 	"description": "Simple add copyright to single file",
 	"publisher": "Dejo095",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"icon": "resources/copyright.jpg",
 	"engines": {
 		"vscode": "^1.63.0"
