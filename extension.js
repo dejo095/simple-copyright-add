@@ -19,30 +19,26 @@ function activate(context) {
 		const editor = vscode.window.activeTextEditor;
 
 		if (!editor) {
-			vscode.window.showInformationMessage('No editor is active')
+			vscode.window.showInformationMessage('Editor is not active')
 			return
 		}
 
 		fileExtension = editor.document.uri.fsPath.split('.').pop();
 		switch (fileExtension.toLowerCase()) {
-			case 'js': commentStart = '/*\n'; commentEnd='\n*/\n'; break;
-			case 'ts': commentStart = '/*\n'; commentEnd='\n*/\n'; break;
+			case 'js': commentStart = '/****************************\n'; commentEnd='\n****************************/\n'; break;
+			case 'ts': commentStart = '/****************************\n'; commentEnd='\n****************************/\n'; break;
 			case 'java': commentStart = '/*\n'; commentEnd='\n*/\n'; break;
 			case 'c': commentStart = '/*\n'; commentEnd='\n*/\n'; break;
-			case 'cpp': commentStart = '/*\n'; commentEnd='\n*/\n'; break;
-			case 'go': commentStart = '/*\n'; commentEnd='\n*/\n'; break;
 			case 'css': commentStart = '/*\n'; commentEnd='\n*/\n'; break;
-			case 'html': commentStart = '<!--\n'; commentEnd='\n-->\n'; break;
 			case 'py': commentStart = '\"\"\"\n'; commentEnd='\n\"\"\"\n'; break;
-			case 'txt': commentStart = '\n'; commentEnd='\n'; break;
-			default: commentStart = '/*\n'; commentEnd='\n*/\n';
+			default: commentStart = '/****************************\n'; commentEnd='\n****************************/\n';
 		}
 
 		if (fileExtension != '') {
 			editor.edit( instance => {
-				instance.insert(copyrightPosition, commentStart + copyrightText + commentEnd);
+				instance.insert(copyrightPosition, commentStart + copyrightText + commentEnd + '\n');
 			});
-			vscode.window.showInformationMessage(`Copyright is added to ${fileExtension}`);
+			vscode.window.showInformationMessage(`Copyright added to ${fileExtension}`);
 		} else {
 			vscode.window.showInformationMessage('File not Supported yet');
 		}
