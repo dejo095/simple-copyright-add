@@ -4,6 +4,10 @@
 	"description": "Simple add copyright to single file",
 	"publisher": "Dejo095",
 	"version": "1.1.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dejo095/simple-copyright-add"
+	},
 	"icon": "resources/copyright.jpg",
 	"engines": {
 		"vscode": "^1.63.0"

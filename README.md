@@ -26,7 +26,7 @@ In open file press `CTRL + SHIFT + P` and type: Copyright insert
 
 ## Release Notes
 
-### 1.0.2
+### 1.1.0
 add extra space below copyright
 add extra ***
 ### 1.0.1
