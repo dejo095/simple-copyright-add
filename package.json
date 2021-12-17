@@ -1,0 +1,57 @@
+{
+	"name": "simple-copyright-add",
+	"displayName": "Simple Copyright Add",
+	"description": "Simple add copyright to single file",
+	"publisher": "Dejo095",
+	"version": "1.0.1",
+	"icon": "resources/copyright.jpg",
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"extensionKind": [
+		"ui",
+		"workspace"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:simple-copyright-add.copyRightInsert"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "simple-copyright-add.copyRightInsert",
+				"title": "Copyright Insert"
+			}
+		],
+		"configuration": {
+			"id": "simpleCopyrightAdd",
+			"title": "Simple Copyright Add",
+			"properties": {
+				"simpleCopyrightAdd.copyrightText": {
+					"type": "string",
+					"default": "Place your copyright info here",
+					"description": "Place your copyright info here"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.63.0",
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"eslint": "^8.1.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.3",
+		"typescript": "^4.4.4",
+		"@vscode/test-electron": "^1.6.2"
+	}
+}
