@@ -27,10 +27,9 @@ function activate(context) {
 		switch (fileExtension.toLowerCase()) {
 			case 'js': commentStart = '/****************************\n'; commentEnd='\n****************************/\n'; break;
 			case 'ts': commentStart = '/****************************\n'; commentEnd='\n****************************/\n'; break;
-			case 'java': commentStart = '/*\n'; commentEnd='\n*/\n'; break;
-			case 'c': commentStart = '/*\n'; commentEnd='\n*/\n'; break;
-			case 'css': commentStart = '/*\n'; commentEnd='\n*/\n'; break;
-			case 'py': commentStart = '\"\"\"\n'; commentEnd='\n\"\"\"\n'; break;
+			case 'java': commentStart = '/****************************\n'; commentEnd='\n****************************/\n'; break;
+			case 'c': commentStart = '/****************************\n'; commentEnd='\n****************************/\n'; break;
+			case 'css': commentStart = '/****************************\n'; commentEnd='\n****************************/\n'; break;
 			default: commentStart = '/****************************\n'; commentEnd='\n****************************/\n';
 		}
 

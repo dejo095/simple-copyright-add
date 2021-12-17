@@ -2,13 +2,14 @@
 
 ## Features
 
-Use it for adding very simple Copyright info to your files. It adds copyright info to opened file only.
+Use it for adding very simple Copyright info to your open file. It adds copyright info to opened file only.
+Support atm for: ts, js, java, css, cs files
 
 example:
 
-/* <br>
+/**************************** <br>
 Place your copyright text here <br>
-*/
+****************************/
 
 ## Extension Settings
 
